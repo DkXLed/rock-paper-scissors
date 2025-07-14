@@ -16,7 +16,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     
-    let handThrow= window.prompt("Rock, Paper, or Scissors? Choose Wisely!");
+    let handThrow = window.prompt("Rock, Paper, or Scissors? Choose Wisely!").toLowerCase();
     if (handThrow==="rock") {
         return("You threw Rock") ;
     }
