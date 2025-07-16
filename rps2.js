@@ -21,7 +21,7 @@ function getHumanChoice() {
     return yourRpsPick;
 }
 
-// function logs choice in console and returns winner/loser/tie string
+// function logs choice in console and returns winner/loser/tie string, increments score
 
 function playRound(humanChoice, computerChoice) {
     console.log("You picked " + humanSelection)
@@ -32,20 +32,20 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice === "paper" && computerChoice === "rock" || 
              humanChoice === "rock" && computerChoice === "scissors" ||
              humanChoice === "scissors" && computerChoice === "paper") {
+                ++humanScore;
         return "Good throw. Point goes to you!";
         }
     else (humanChoice === "paper" && computerChoice === "scissors" ||
           humanChoice === "rock" && computerChoice === "paper" ||
-          humanChoice === "scissors" && computerChoice === "rock") 
+          humanChoice === "scissors" && computerChoice === "rock") ;
+          ++computerScore;
         return "Poor choice. Computer wins this round";      
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection =getComputerChoice();
 console.log(playRound(humanSelection, computerSelection)) ;
-
-
-
+console.log("Your score = " + humanScore, "----" , "Computer score = " + computerScore)
 
 
 
