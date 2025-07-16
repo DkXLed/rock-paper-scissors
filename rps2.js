@@ -1,3 +1,7 @@
+let humanScore = 0;
+let computerScore = 0;
+
+// function to have computer choose 
 function getComputerChoice() {
     const randomNumber = Math.random();
     if (randomNumber <= .33) {
@@ -9,6 +13,7 @@ function getComputerChoice() {
     }
 }
 
+// function to prompt human to choose
 function getHumanChoice() {
     let humanChoice = window.prompt("Rock, Paper, or Scissors? Choose wisely!").toLowerCase() ;
     return humanChoice;
@@ -16,3 +21,6 @@ function getHumanChoice() {
 
 console.log("You chose " + getHumanChoice())
 console.log("Computer chose " + getComputerChoice())
+
+
+
