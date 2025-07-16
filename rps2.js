@@ -32,14 +32,14 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice === "paper" && computerChoice === "rock" || 
              humanChoice === "rock" && computerChoice === "scissors" ||
              humanChoice === "scissors" && computerChoice === "paper") {
-                ++humanScore;
-        return "Good throw. Point goes to you!";
+             ++humanScore;
+            return "Good throw. Point goes to you!";
         }
     else (humanChoice === "paper" && computerChoice === "scissors" ||
           humanChoice === "rock" && computerChoice === "paper" ||
-          humanChoice === "scissors" && computerChoice === "rock") ;
+          humanChoice === "scissors" && computerChoice === "rock") 
           ++computerScore;
-        return "Poor choice. Computer wins this round";      
+          return "Poor choice. Computer wins this round";     
 }
 
 const humanSelection = getHumanChoice();
