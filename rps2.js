@@ -15,10 +15,14 @@ function getComputerChoice() {
 }
 
 // function to prompt human to choose
+
 function getHumanChoice() {
     let yourRpsPick = window.prompt("Rock, Paper, or Scissors? Choose wisely!").toLowerCase() ;
     return yourRpsPick;
 }
+
+// function logs choice in console and returns winner/loser/tie string
+
 function playRound(humanChoice, computerChoice) {
     console.log("You picked " + humanSelection)
     console.log("Computer picked " + computerSelection)
@@ -33,8 +37,7 @@ function playRound(humanChoice, computerChoice) {
     else (humanChoice === "paper" && computerChoice === "scissors" ||
           humanChoice === "rock" && computerChoice === "paper" ||
           humanChoice === "scissors" && computerChoice === "rock") 
-        return "Poor choice. Computer wins this round";
-        
+        return "Poor choice. Computer wins this round";      
 }
 
 const humanSelection = getHumanChoice();
@@ -42,8 +45,7 @@ const computerSelection =getComputerChoice();
 console.log(playRound(humanSelection, computerSelection)) ;
 
 
-/*console.log("You picked " + getHumanChoice());
-console.log("Computer chose " + getComputerChoice())*/
+
 
 
 
