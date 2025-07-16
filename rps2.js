@@ -9,8 +9,10 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
-
 function getHumanChoice() {
-    let 
+    let humanChoice = window.prompt("Rock, Paper, or Scissors? Choose wisely!").toLowerCase() ;
+    return humanChoice;
 }
+
+console.log("You chose " + getHumanChoice())
+console.log("Computer chose " + getComputerChoice())
