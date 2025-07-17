@@ -51,4 +51,27 @@ const computerSelection =getComputerChoice();
 console.log(playRound(humanSelection, computerSelection)) ;
 console.log("Your score = " + humanScore, "----" , "Computer score = " + computerScore)
 
+function playGame() {
+    let rounds= 0 
+    while (rounds > 5) {
+        const gameHumanChoice = getHumanChoice();
+        const gameComputerChoice = getComputerChoice();
+        playRound(gameHumanChoice, gameComputerChoice);
+        rounds++
+    }
+    if (humanScore > computerScore) {
+        humanScore++
+        console.log(++humanScore)
+        return ('You Win!' &{humanScore} &{computerScore});
+    }
+    else if (humanScore < computerScore) {
+        
+        console.log(computerScore);
+        return 'You Lose!'
+    }
+    else{
+        return 'Draw!'
+    }
+}
 
+console.log(playGame())
